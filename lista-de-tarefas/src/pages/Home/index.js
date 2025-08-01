@@ -11,7 +11,7 @@ function Home() {
   function handleLogin(e){
     e.preventDefault();
     if(email !== '' && password !== ''){
-
+      
     }else{
       alert ('Preencha todos os campos!')
     }
