@@ -26,6 +26,7 @@ function Home() {
         })
         .catch((error)=>{
           console.log('erro ao fazer o login');
+          alert('Erro ao fazer o login: ' + error);
         })
     }else{
       alert ('Preencha todos os campos!')

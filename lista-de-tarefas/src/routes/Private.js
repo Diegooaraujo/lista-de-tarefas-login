@@ -12,8 +12,8 @@ function Private({ children }) {
 
     useEffect(()=>{
         async function checkLogin(){
-            const unsub = onAuthStateChanged(auth,(userLogado)=>{
-                //verifica se o usuario esta logado
+            const unsub = onAuthStateChanged(auth,(userLogado)=>{ //onAuthStateChanged verifica se o usuario esta logado
+               
                 if(userLogado){
                     const userData = {
                         uid:userLogado.uid,
