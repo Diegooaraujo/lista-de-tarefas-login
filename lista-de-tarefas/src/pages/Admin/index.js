@@ -85,7 +85,19 @@ function Admin() {
   
    }
     async function handleUpdateTarefa(){
-      
+      const docRef =  doc(db,'tarefas',edit?.id);
+      await updateDoc(docRef,{
+        tarefa:tarefa
+      })
+      .then(()=>{
+        setTarefa('');
+        setEdit({});
+      })
+      .catch(()=>{
+        console.log('Erro ao atualizar tarefa');
+        setTarefa('');
+        setEdit({});
+      })
     
   }
 
